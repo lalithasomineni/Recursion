@@ -200,5 +200,39 @@ function reverse(str){
         return str;
     }
     return reversed = reverse(str.slice(1)) + str[0];
+
 }
 console.log(reverse("al"));
+
+
+
+function isOdd(arr){
+    if(arr.length <= 0){
+        return false;
+    }
+    if(arr[0]%2 != 0){
+        //console.log(arr);
+        arr = arr.slice(1);
+        //console.log(arr);
+        isOdd(arr);
+        return true;
+    }
+    if(arr[0]%2 == 0){
+        arr = arr.slice(1);
+        return isOdd(arr);
+    }
+   
+}
+console.log(isOdd([2,8,4]));
+
+function capitalize(arr){
+    if(arr.length == 0 || arr.length < 0){
+        return false;
+    }
+    let res = capitalize(arr.slice(0,1));
+    res.charAt(0).toUpperCase();
+    return res;
+
+    
+}
+console.log(capitalize(["car"]));
