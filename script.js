@@ -225,14 +225,4 @@ function isOdd(arr){
 }
 console.log(isOdd([2,8,4]));
 
-function capitalize(arr){
-    if(arr.length == 0 || arr.length < 0){
-        return false;
-    }
-    let res = capitalize(arr.slice(0,1));
-    res.charAt(0).toUpperCase();
-    return res;
 
-    
-}
-console.log(capitalize(["car"]));
